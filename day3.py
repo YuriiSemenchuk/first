@@ -61,7 +61,7 @@ def day3_5():
     combined_names = name2 + name1 #додаю їх
     score = (combined_names.count("t") + combined_names.count("r") + combined_names.count("u") + combined_names.count("e")) * 10
     score += combined_names.count("l") + combined_names.count("o") + combined_names.count("v") + combined_names.count("e") #рахую очки
-    if score < 10 or score > 90:
+    if score < 10 or score > 90: #оприділяю що написати
         print(f"Your score is {score}, you go together like coke and mentos")
     elif score >= 40 and score <= 50:
         print(f"Your score is {score}, you are alright together")
@@ -72,12 +72,12 @@ def day3():
     print("game")
     print("Welcome to Treasure Island")
     print("Your mission is to find the treasure")
-    answer1 = input("You are at a cross road. Where do you want to go? Type 'left' or 'right' ").lower()
-    if answer1 == "left":
-        answer2 = input("You come to a lace. There is an island in the middle of lace. Tipe 'wait' to wait the boat. Type 'swim' to swim across ").lower()
-        if answer2 == "wait":
-            answer3 = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow, one blue. Wich color do you choose? ").lower()
-            if answer3 == "yellow":
+    answer1 = input("You are at a cross road. Where do you want to go? Type 'left' or 'right' ").lower() #визначаю відповідь користувача
+    if answer1 == "left": #оприділяю чи відповідь правильна і реагую
+        answer2 = input("You come to a lace. There is an island in the middle of lace. Tipe 'wait' to wait the boat. Type 'swim' to swim across ").lower() #визначаю відповідь користувача
+        if answer2 == "wait": #оприділяю чи відповідь правильна і реагую
+            answer3 = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow, one blue. Wich color do you choose? ").lower() #визначаю відповідь користувача
+            if answer3 == "yellow": #оприділяю чи відповідь правильна і реагую
                 print("You found a treasure. You Win!")
             elif answer3 == "blue":
                 print("You enter a room of beasts. Game over")
