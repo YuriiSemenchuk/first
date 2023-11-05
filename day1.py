@@ -4,4 +4,3 @@ pet = input("як зваали твого домашнього улюбленц�
 spase = " "
 name_ofband = citi + spase + pet
 print(name_ofband)
-
