@@ -4,8 +4,8 @@ def day5_1():
         student_heights[n] = int(student_heights[n])
     sum_heights = 0
     len_student_heights = 0
-    for sum in student_heights:  # вираховую суму всіх висот і кількість студентів
-        sum_heights += sum
+    for suma in student_heights:  # вираховую суму всіх висот і кількість студентів
+        sum_heights += suma
         len_student_heights += 1
     print(int(sum_heights / len_student_heights))  # вираховую середню висоту і вивожу її
 
@@ -23,9 +23,9 @@ def day5_2():
 
 
 def day5_3():
-    sum = 0
+    suma = 0
     for number in range(2, 101, 2):  # знаходжу суму чисел від 1 до 100 з кроком в два
-        sum += number
+        suma += number
     print(sum)  # вивожу суму
 
 
@@ -59,13 +59,16 @@ def day5():
     symbols_n = 0
     while len(password) != numbers_number + letters_number + symbols_number:  # повторюю поки кількість симв
         random_number = random.randint(0, 2)  # визначаю літеру символ чи число зараз добавити
-        if random_number == 0 and letters_n < letters_number:  # провіряю чи повинен поставити літеру і чи добавлено достатньо літер
+        if random_number == 0 and letters_n < letters_number:
+            # провіряю чи повинен поставити літеру і чи добавлено достатньо літер
             password += password_in_order[0][random.randint(0, len(letters) - 1)]  # якщо так то доставляю літеру
             letters_n += 1  # записуюю що доставив літеру
-        elif random_number == 1 and numbers_n < numbers_number:  # провіряю чи повинен поставити число і чи добавлено достатньо чисел
+        elif random_number == 1 and numbers_n < numbers_number:
+            # провіряю чи повинен поставити число і чи добавлено достатньо чисел
             password += password_in_order[1][random.randint(0, len(numbers) - 1)]  # якщо так то доставляю число
             numbers_n += 1  # записуюю що доставив число
-        elif random_number == 2 and symbols_n < symbols_number:  # провіряю чи повинен поставити символ і чи добавлено достатньо символів
+        elif random_number == 2 and symbols_n < symbols_number:
+            # провіряю чи повинен поставити символ і чи добавлено достатньо символів
             password += password_in_order[2][random.randint(0, len(symbols) - 1)]  # якщо так то доставляю символ
             symbols_n += 1  # записуюю що доставив символ
     print(password)
