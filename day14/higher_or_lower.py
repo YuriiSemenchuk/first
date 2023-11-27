@@ -5,6 +5,7 @@ import random
 
 
 def first(answers, b):
+    # якщо вгадав хоч раз то А = Б якщо ні то випадкове
     if answers > 0:
         a = b[1]
     else:
@@ -17,6 +18,7 @@ def first(answers, b):
 
 
 def opposite():
+    # вибираю випадкове Б
     b = random.randint(1, len(data) - 1)
     print(f"Against B: {data[b]['name']},"
           f" a {data[b]['description']},"
@@ -39,7 +41,7 @@ def game():
             answer = 1
             not_answer = 0
 
-        if answers[answer][0] < answers[not_answer][0]:
+        if answers[answer][0] < answers[not_answer][0]:  # провіряю вгадав чи ні
             print("You lose!")
             print(f"{data[a[1]]['name']} has {a[0]}m followers, {data[b[1]]['name']} has {b[0]}m followers")
             if input("Do you wont play again? 'y' or 'n': ") == 'n':
