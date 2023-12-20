@@ -26,10 +26,11 @@ color_list = [(199, 175, 117), (124, 36, 24), (210, 221, 213),
 
 for i in range(dots_in_line):
     timmy.setheading(0)
-    timmy.dot(size, random.choice(color_list))
-    for _ in range(dots_in_line - 1):
+    timmy.dot(size, random.choice(color_list)) # роблю першу точку в лінії
+    for _ in range(dots_in_line - 1):  # роблю лінію
         timmy.forward(step)
         timmy.dot(size, random.choice(color_list))
+    # переходжу в нову лінію
     timmy.setheading(90)
     timmy.forward(step)
     timmy.setheading(180)
